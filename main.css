@@ -1,0 +1,29 @@
+body{
+    display: block;
+    background-color: #fff;
+}
+
+.main{
+    display: grid;
+    width:fit-content; height:100vh;
+    grid-template-areas: "a a" "c d" "c e";
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 8em 1fr 6.75em;
+    margin: 0 auto;
+}
+
+header{
+    grid-area: a;
+}
+
+.box{
+    grid-area: c;
+}
+
+.top{
+    grid-area: d;
+}
+
+.bottom{
+    grid-area: e;
+}
