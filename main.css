@@ -1,6 +1,21 @@
+:root {
+    --main-text:black;
+    --main-bg:white;
+}
+
+@media (prefers-color-scheme: dark){
+    :root{
+        --main-text:white;
+        --main-bg:black;
+    }
+
+	a{color:#93d7f7;}
+}
+
 body{
     display: block;
-    background-color: #fff;
+    color: var(--main-text);
+    background-color: var(--main-bg);
 }
 
 .main{
