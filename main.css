@@ -25,9 +25,9 @@ body{
 .main{
     display: grid;
     width:100%; height:100vh;
-    grid-template-areas: "a a" "c d" "c e";
-    grid-template-columns: 0.25fr 1fr;
-    grid-template-rows: 8em 1fr 6.75em;
+    grid-template-areas: "a " "c" "d" "e";
+    grid-template-columns: 1fr;
+    grid-template-rows: 8em 5em 1fr 3em;
     margin: 0 auto;
 }
 
@@ -37,11 +37,30 @@ header{
 
 .hamburger-menu{
     display:none;
+    margin: auto 0;
 }
 
-.box{
+.nav1{
     grid-area: c;
-    margin: 0 auto;
+    width: 100%;
+    height: 70px;
+    background-color: var(--menu-bg-color);
+    padding-top: 5px;
+    box-sizing: border-box;
+}
+
+.ul1 {
+    display: flex;
+}
+.li1 {
+    list-style: none;
+}
+
+.a1{
+    display: block;
+    text-decoration: none;
+    color: white;
+    margin-right: 35px;
 }
 
 .top{
