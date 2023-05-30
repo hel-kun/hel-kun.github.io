@@ -5,9 +5,9 @@ body{
 
 .main{
     display: grid;
-    width:fit-content; height:100vh;
+    width:100vw; height:100vh;
     grid-template-areas: "a a" "c d" "c e";
-    grid-template-columns: 30% 70%;
+    grid-template-columns: 0.2fr 1fr;
     grid-template-rows: 8em 1fr 6.75em;
     margin: 0 auto;
 }
@@ -18,6 +18,7 @@ header{
 
 .box{
     grid-area: c;
+    margin: auto;
 }
 
 .top{
