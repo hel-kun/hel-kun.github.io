@@ -36,6 +36,10 @@ header{
     margin: auto 0;
 }
 
+hr{
+    display: none;
+}
+
 .header{
     text-decoration: none;
     color: var(--main-text);
@@ -84,6 +88,9 @@ header{
         grid-template-areas: "a" "d" "e";
         grid-template-columns: 1fr;
         grid-template-rows: 8em 1fr 6.75em;
+    }
+    hr{
+        display: block;
     }
     .nav1{
         display:none;
