@@ -33,11 +33,11 @@ body{
 
 header{
     grid-area: a;
+    margin: auto 0;
 }
 
 .hamburger-menu{
     display:none;
-    margin: auto 0;
 }
 
 .nav1{
