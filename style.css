@@ -56,9 +56,11 @@ header{
 }
 
 .ul1 {
+    display: block;
     display: flex;
 }
 .li1 {
+    display: block;
     list-style: none;
 }
 
@@ -85,6 +87,14 @@ header{
     }
     .nav1{
         display:none;
+    }
+
+    .li1{
+        display: none;
+    }
+
+    .a1{
+        display: none;
     }
 
     .hamburger-menu{
