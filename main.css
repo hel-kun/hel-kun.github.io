@@ -36,6 +36,11 @@ header{
     margin: auto 0;
 }
 
+.header{
+    text-decoration: none;
+    color: var(--main-text);
+}
+
 .hamburger-menu{
     display:none;
 }
