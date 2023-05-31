@@ -54,7 +54,7 @@ hr{
     grid-area: c;
     width: 100%;
     height: 70px;
-    background-color: var(--menu-bg-color);
+    background-color: var(--menu-btn-color);
     padding-top: 5px;
     box-sizing: border-box;
 }
