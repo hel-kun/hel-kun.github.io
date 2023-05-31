@@ -78,6 +78,10 @@ hr{
 .top{
     grid-area: d;
 }
+.top iframe{
+    width:32%;
+    aspect-ratio: 560/315;
+}
 
 .bottom{
     grid-area: e;
@@ -102,6 +106,10 @@ hr{
 
     .a1{
         display: none;
+    }
+
+    .top iframe{
+        width:48%;
     }
 
     .hamburger-menu{
@@ -196,5 +204,11 @@ hr{
 
     #menu-btn-check:checked ~ .menu-content {
         left: 50%;/*メニューを画面内へ*/
+    }
+}
+
+@media (max-width:450px){
+    .top iframe{
+        width:95%;
     }
 }
