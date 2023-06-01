@@ -63,7 +63,7 @@
         </div>
         <div class="blog">
             <div class="blogbox">
-                <img src="./fig/sd-90.jpg">
+                <img class="topimg" src="./fig/sd-90.jpg">
                 <dl>
                     <h2>SD-90のドライバをWin11に入れようとしてめちゃくちゃ苦戦した話</h2>
                     <dt style="text-align:center;">
@@ -94,15 +94,68 @@
                         </dt>
                         <dt>(ChatGPTより引用)</dt>
                     </dl>
-                    
-                    <br>
-                    東方Prijectの原曲に使われている音源です。
+                    まあ、東方Prijectの原曲に使われている音源です。
                 </p>
                 <h3>SD-90のドライバ事情<hr></h3>
                 <p>なんとSD-90のドライバは公式ではWin8までしか出ていません！そんなわけで今のWin10以降の環境でSD-90を使うには一手間かかります。この先の人が私みたいに苦戦しないように今からドライバのインストール方法を説明します。</p>
                 <h3>1.Win8/8.1版のSD-90ドライバをインストールする<hr></h3>
                 <p>
                     <a href="http://static.roland.com/support_archive/jp/SD-90_62482892_readme_jp.html?_gl=1*for997*_gcl_au*MzQxNTMwMzQxLjE2ODU1MzM0Njk.*_ga*NjY2NTY3Mjc4LjE2ODU1MzM0Njk.*_ga_CF0D38ZPLC*MTY4NTYwOTgwNy4zLjAuMTY4NTYwOTgwNy42MC4wLjA.&_ga=2.15491890.504392551.1685533469-666567278.1685533469" target="_blank">こちらのRoland公式ページ</a>からWindows 8 / 8.1版のドライバをインストールしてzipファイルを解凍してください。
+                </p>
+                <h3>2.ドライバ内のinfファイルを書き換える<hr></h3>
+                <p>
+                    <dl>
+                        解凍したファイルの中に「Files」というフォルダが入っているはずです。そのフォルダの中の「64bit」->「Files」というフォルダの中に「RDIF1016.INF」というファイルがあると思います。それの中身を書き換えましょう。
+                        <div class="img"><img src="./fig/warning.png"></div>
+                        こんな警告も無視して開きます。
+                        さて、このinfファイルの中身を見てみると、このように書かれている場所があると思います。
+                        <dt class="referencebox">
+                            [Manufacturer]<br>
+                            %MfgName%=Roland,NTamd64.6.2,NTamd64.7<br>
+                            <br>
+                            ;[ControlFlags]<br>
+                            ;ExcludeFromSelect=*<br>
+                            <br>
+                            [Roland]<br>
+                            ;; Windows7 - Windows XP 64<br>
+                            ;; not supported<br>
+                            <br>
+                            [Roland.NTamd64.6.2]<br>
+                            ;; Windows8<br>
+                            %RDID0016DeviceDesc%=RDID0016Install, USB\VID_0582&PID_0016 ; SD-90<br>
+                            <br>
+                            [Roland.NTamd64.7]<br>
+                            ;; not supported<br>
+                            <br>
+                            ;<br>
+                        </dt>
+                        これを下記のように書き換えます。
+                        <dt class="referencebox">
+                            [Manufacturer]<br>
+                            %MfgName%=Roland,NTamd64.6.2,NTamd64.7,NTamd64.10<br>
+                            <br>
+                            ;[ControlFlags]<br>
+                            ;ExcludeFromSelect=*<br>
+                            <br>
+                            [Roland]<br>
+                            ;; Windows7 - Windows XP 64<br>
+                            ;; not supported<br>
+                            <br>
+                            [Roland.NTamd64.6.2]<br>
+                            ;; Windows8<br>
+                            %RDID0016DeviceDesc%=RDID0016Install, USB\VID_0582&PID_0016 ; SD-90<br>
+                            <br>
+                            [Roland.NTamd64.7]<br>
+                            ;; Windows10<br>
+                            %RDID0016DeviceDesc%=RDID0016Install, USB\VID_0582&PID_0016 ; SD-90<br>
+                            <br>
+                            [Roland.NTamd64.10]<br>
+                            ;; Windows11<br>
+                            %RDID0016DeviceDesc%=RDID0016Install, USB\VID_0582&PID_0016 ; SD-90<br>
+                            ;
+                        </dt>
+                        これで書き換えは完了です。
+                    </dl>
                 </p>
             </div>
         </div>

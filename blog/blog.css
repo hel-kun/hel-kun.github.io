@@ -18,7 +18,7 @@
     margin: 2em 10em;
     border-radius: 10px;
 }
-.blogbox img{
+.topimg{
     width:100%;
     margin: 0 0;
     padding:0 0;
@@ -34,14 +34,33 @@
     padding: 0;
 }
 
+.img{
+    width:400px;
+    margin:0 auto;
+}
+.img img{
+    width:400px;
+    margin:0 0;
+    padding:0 0;
+    border-radius: 10px;
+}
+
+
 .referencebox{
     background-color: var(--blog-rebox-color);
+    color:aliceblue;
     padding: 0.5em 1em;
-    margin: 2em 0;
+    margin: 0 0;
 }
 
 @media (max-width:800px){
     .blogbox{
         margin: 2em 0;
+    }
+}
+
+@media (max-width:400px){
+    .img img{
+        width:100%;
     }
 }
