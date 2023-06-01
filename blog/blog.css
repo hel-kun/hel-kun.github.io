@@ -1,0 +1,47 @@
+:root {
+    --blog-box-color:rgba(215, 215, 215, 0.9);
+    --blog-rebox-color:rgba(133, 133, 133, 0.9);
+}
+
+@media (prefers-color-scheme: dark){
+    :root{
+        --blog-box-color:rgba(32,32,32,0.9);
+        --blog-rebox-color:rgba(100, 100, 100, 0.9);
+    }
+}
+.blog{
+    grid-area: d;
+}
+.blogbox{
+    background-color: var(--blog-box-color);
+    padding: 0.5em 1em;
+    margin: 2em 10em;
+    border-radius: 10px;
+}
+.blogbox img{
+    width:100%;
+    margin: 0 0;
+    padding:0 0;
+    border-radius: 10px;
+}
+.blogbox h2{
+    text-align:center;
+    margin: 0; 
+    padding: 0;
+}
+.blogbox p {
+    margin: 0; 
+    padding: 0;
+}
+
+.referencebox{
+    background-color: var(--blog-rebox-color);
+    padding: 0.5em 1em;
+    margin: 2em 0;
+}
+
+@media (max-width:800px){
+    .blogbox{
+        margin: 2em 0;
+    }
+}

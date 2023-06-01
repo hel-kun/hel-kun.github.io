@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="twitter:site" content="@welcome_madhell"/>
+    <meta name="og:title" content="へる破壊財団/SD-90のドライバをWin11に入れようとしてめちゃくちゃ苦戦した話" />
+    <meta name="og:description" content="なぜこんなに苦戦したのか..." />
+    <meta name="og:image" content="https://helkun.dev/blog/fig/sd-90.jpg" />
+    <link href="../main.css" rel="stylesheet" type="text/css">
+    <link href="blog.css" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" href="../fig/welcome_hell.PNG">
+    <script type="text/javascript" src="main.js"></script>
+    <title>へる破壊財団</title>
+</head>
+
+<body>
+    <!--
+             _,,....,,_     ＿人人人人人人人人人人人人人人＿
+        _,,''::::::::::`'' ＞  ゆっくりしていってね！！！  ＜
+        ヽ:::::::::::::::::ー^Y^Y^Y^Y^Y^Y^Y^Y^Y^Y^Y^Y^Y^Yー
+          |:::;ノ'ー＼:::::::＼_,.-‐ｧ        ＿_  ＿＿  ＿___
+          |:::ﾉ    ヽ､ヽr-r'""'   (.＿     ,' _, '￣￣`-ゝ._イ、
+        _.! イ_　　_,.ﾍｰｧ'二ﾊ二ヽ､へ,_7     'r´            ヽ、ﾝ、
+        ::::rｰ''7ｺ-‐'"´      ; ',`ヽ/`7  ,'＝=─-        -─=＝', i
+        r-'ｧ'"´/   /!  ﾊ   ハ   ! iヾ_ﾉ  i  ｲ iゝ,ｲ人レ／_ルヽｲi |
+        !イ´,'|   /_,!/  V　､!__ﾊ,'  ,ゝ ﾚﾘｲi (ﾋ_] 　　 　ﾋ_ﾝ)||i||
+        `! !/ﾚi'   (ﾋ_]      ﾋ_ﾝ ﾚ'i ﾉ    !Y!""   ,＿__,   ""「!ﾉ|
+        ,' ﾉ   !'"     ,＿__,　 "'i.ﾚ'     L.',.  ヽ _ﾝ      L」ﾉ|
+         （   ,ﾊ       ヽ _ﾝ      人!      |||ヽ、         ,ｲ||ｲ|/
+        ,ﾍ,)､   )＞,､ _____,  ,.イ  ハ      レ ル｀ー--─ ´ルﾚ  ﾚ´
+
+    -->
+    <div class="main">
+        <header>
+            <h1><a class="header" href="https://helkun.dev">へる破壊財団</a></h1>
+            <hr>
+        </header>
+        
+        <nav class="nav1">
+            <ul class="ul1">
+                <li class="li1"><a class="a1" href="https://helkun.dev">TOP</a></li>
+                <li class="li1"><a class="a1" href="../music.html">Music</a></li>
+                <li class="li1"><a class="a1" href="../blog.html">Blog</a></li>
+                <li class="li1"><a class="a1" href="../sns.html">SNS</a></li>
+                <li class="li1"><a class="a1" href="../link.html">Link集</a></li>
+            </ul>
+        </nav>
+
+        <div class = "hamburger-menu">
+            <input type="checkbox" id="menu-btn-check">
+                <label for="menu-btn-check" class="menu-btn"><span></span></label>
+                <div class="menu-content">
+                    <ul>
+                        <li><a href = "https://helkun.dev">TOP</a></li>
+                        <li><a href="../music.html">Music</a></li>
+                        <li><a href="../blog.html">Blog</a></li>
+                        <li><a href="../sns.html">SNS</a></li>
+                        <li><a href="../link.html">Link集</a></li>
+                    </ul>
+                </div>
+        </div>
+        <div class="blog">
+            <div class="blogbox">
+                <img src="./fig/sd-90.jpg">
+                <dl>
+                    <h2>SD-90のドライバをWin11に入れようとしてめちゃくちゃ苦戦した話</h2>
+                    <dt style="text-align:center;">
+                        <p>なぜこんなに苦戦したのか...</p>
+                        <h3>投稿日：2023年6月3日</h3>
+                    </dt>
+                </dl>
+            </div>
+
+            <div class="blogbox">
+                <p>
+                    こんにちは、へるくんです。最近マイクラをやりすぎて曲がまったくかけておりません。(〆切がやばい！！！)
+                    <br>
+                    今年の3月についにデスクトップPCを組み立てました。その時にSD-90という骨董品を使うためのドライバを入れるのに大苦戦したので、その入れ方の話が出来たらいいなと思います。
+                </p>
+                <h3>そもそもSD-90とは？<hr></h3>
+                <p>
+                    <dl>
+                        <dt class="referencebox">
+                            EDIROL SD-90は、Rolandが製造したハードウェア音源です。これは、MIDIキーボードやコンピューターと接続して使用することができる、オールインワンの音楽制作ユニットです。
+                            <br>
+                            SD-90は、様々な音色や音楽エフェクトを備えており、高品質な音源として知られています。内部には、数百以上の音色（サンプル音源）が収録されており、ピアノ、ギター、ドラム、管楽器など、さまざまな楽器の音を再現することができます。
+                            <br>
+                            また、SD-90は、MIDIキーボードやコンピューターからのMIDI信号を受け取り、音源として鳴らすことができます。MIDI信号に含まれる演奏データを解釈し、対応する音色で音を生成します。これにより、演奏の録音や編集、シーケンス作業などが容易に行えます。
+                            SD-90は、エフェクトプロセッサも内蔵しており、リバーブ、コーラス、ディレイなど、さまざまなエフェクトを音にかけることができます。これにより、より表現豊かな音楽制作が可能となります。
+                            <br>
+                            なお、EDIROL SD-90は一部のミュージシャンやプロデューサーによって広く使用されてきましたが、現在では新しいモデルや他の製品に取って代わられている可能性があります。したがって、最新の情報を入手するためには、Rolandの公式ウェブサイトや販売代理店に問い合わせることをおすすめします。
+                        </dt>
+                        <dt>(ChatGPTより引用)</dt>
+                    </dl>
+                    
+                    <br>
+                    東方Prijectの原曲に使われている音源です。
+                </p>
+                <h3>SD-90のドライバ事情<hr></h3>
+                <p>なんとSD-90のドライバは公式ではWin8までしか出ていません！そんなわけで今のWin10以降の環境でSD-90を使うには一手間かかります。この先の人が私みたいに苦戦しないように今からドライバのインストール方法を説明します。</p>
+                <h3>1.Win8/8.1版のSD-90ドライバをインストールする<hr></h3>
+                <p>
+                    <a href="http://static.roland.com/support_archive/jp/SD-90_62482892_readme_jp.html?_gl=1*for997*_gcl_au*MzQxNTMwMzQxLjE2ODU1MzM0Njk.*_ga*NjY2NTY3Mjc4LjE2ODU1MzM0Njk.*_ga_CF0D38ZPLC*MTY4NTYwOTgwNy4zLjAuMTY4NTYwOTgwNy42MC4wLjA.&_ga=2.15491890.504392551.1685533469-666567278.1685533469" target="_blank">こちらのRoland公式ページ</a>からWindows 8 / 8.1版のドライバをインストールしてzipファイルを解凍してください。
+                </p>
+            </div>
+        </div>
+
+        <footer class="bottom">
+            <p>
+                &copy; 2023 へるくん
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
