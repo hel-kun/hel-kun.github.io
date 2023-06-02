@@ -36,7 +36,7 @@ header{
     margin: auto 0;
 }
 
-hr{
+header hr{
     display: none;
 }
 
@@ -75,6 +75,13 @@ hr{
     margin-right: 35px;
 }
 
+.blogimg{
+    vertical-align: middle;
+    display: inline-block;
+    width: 300px;
+    border-radius: 10px;
+}
+
 .top{
     grid-area: d;
 }
@@ -93,7 +100,7 @@ hr{
         grid-template-columns: 1fr;
         grid-template-rows: 8em 1fr 6.75em;
     }
-    hr{
+    header hr{
         display: block;
     }
     .nav1{
@@ -110,6 +117,10 @@ hr{
 
     .top iframe{
         width:48%;
+    }
+
+    .blogimg{
+        width: 200px;
     }
 
     .hamburger-menu{
@@ -210,5 +221,8 @@ hr{
 @media (max-width:450px){
     .top iframe{
         width:95%;
+    }
+    .blogimg{
+        width: 100px;
     }
 }

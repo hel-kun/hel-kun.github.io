@@ -7,7 +7,7 @@
     <meta name="twitter:site" content="@welcome_madhell"/>
     <meta name="og:title" content="へる破壊財団/SD-90のドライバをWin11に入れようとしてめちゃくちゃ苦戦した話" />
     <meta name="og:description" content="なぜこんなに苦戦したのか..." />
-    <meta name="og:image" content="https://helkun.dev/blog/fig/sd-90.jpg" />
+    <meta name="og:image" content="https://helkun.dev/blog/fig/sd90/sd-90.jpg" />
     <link href="../main.css" rel="stylesheet" type="text/css">
     <link href="blog.css" rel="stylesheet" type="text/css">
     <link rel="shortcut icon" href="../fig/welcome_hell.PNG">
@@ -63,12 +63,12 @@
         </div>
         <div class="blog">
             <div class="blogbox">
-                <img class="topimg" src="./fig/sd-90.jpg">
+                <img class="topimg" src="./fig/sd90/sd-90.jpg">
                 <dl>
                     <h2>SD-90のドライバをWin11に入れようとしてめちゃくちゃ苦戦した話</h2>
                     <dt style="text-align:center;">
                         <p>なぜこんなに苦戦したのか...</p>
-                        <h3>投稿日：2023年6月3日</h3>
+                        <h3>投稿日：2023年6月2日</h3>
                     </dt>
                 </dl>
             </div>
@@ -101,13 +101,14 @@
                 <h3>1.Win8/8.1版のSD-90ドライバをインストールする<hr></h3>
                 <p>
                     <a href="http://static.roland.com/support_archive/jp/SD-90_62482892_readme_jp.html?_gl=1*for997*_gcl_au*MzQxNTMwMzQxLjE2ODU1MzM0Njk.*_ga*NjY2NTY3Mjc4LjE2ODU1MzM0Njk.*_ga_CF0D38ZPLC*MTY4NTYwOTgwNy4zLjAuMTY4NTYwOTgwNy42MC4wLjA.&_ga=2.15491890.504392551.1685533469-666567278.1685533469" target="_blank">こちらのRoland公式ページ</a>からWindows 8 / 8.1版のドライバをインストールしてzipファイルを解凍してください。
+                    <br>
+                    もし、以前にSD-90のドライバをインストールしたことがある人はこの段階で解凍したフォルダの中に入っているuninstall.exeを実行することをお勧めします。
                 </p>
                 <h3>2.ドライバ内のinfファイルを書き換える<hr></h3>
                 <p>
                     <dl>
                         解凍したファイルの中に「Files」というフォルダが入っているはずです。そのフォルダの中の「64bit」->「Files」というフォルダの中に「RDIF1016.INF」というファイルがあると思います。それの中身を書き換えましょう。
-                        <div class="img"><img src="./fig/warning.png"></div>
-                        こんな警告も無視して開きます。
+                        <figure class="img"><img src="./fig/sd90/warning.png"><figcaption>こんな警告も無視して開きます。</figcaption></figure>
                         さて、このinfファイルの中身を見てみると、このように書かれている場所があると思います。
                         <dt class="referencebox">
                             [Manufacturer]<br>
@@ -155,7 +156,32 @@
                             ;
                         </dt>
                         これで書き換えは完了です。
+                        <br>
+                        余談ですが、私はこの書き換えを間違えてしまい、infファイルを破壊して顔がなくなりました...。皆さんはこうならないようにしましょう(上のやつをコピペして書き換えるのが書き間違えもなくていいと思います。)
                     </dl>
+                </p>
+                <h3>3.Windows Defenderの設定をいじる<hr></h3>
+                <p>
+                    この設定はセキュリティソフトとしてWindowsディフェンダーを使っている場合の説明です。別のセキュリティソフトを導入している人は分かりません。
+                    <br>
+                    Windowsセキュリティを開きます(下の画像のようにタスクバーから開くこともできます)。
+                    <figure class="img"><img src="fig/sd90/taskba-.png"> </figure>
+                    開いたら、デバイスセキュリティをクリックして、コア分離の詳細を開きましょう。すると、メモリ整合性の設定ができると思うので、これをオフにしてください。
+                    <figure class="img"><img src="./fig/sd90/coa_divide.png"><figcaption> こうなればオッケー</figcaption></figure>
+                    ちなみに私はこれをオフにしてもなぜかドライバインストール時にセキュリティに引っかかっていたので切れ散らかしてWindows Defenderごと切ってからインストールし、インストール後にコア分離をオフにしたWindows Defenderを復活させました。(マジでこれは謎...)
+                </p>
+                <h3>4.署名なしドライバを実行できるようにする<hr></h3>
+                <p>
+                    説明が面倒なので、<a href="https://freesoft.tvbok.com/win10/testmode.html#a03" target="_blank">このサイト</a>を参考にしてください。
+                    説明してくれーって言われたらぼちぼち書きます...。
+                </p>
+                <h3>5.ドライバを入れる<hr></h3>
+                <p>
+                    さて、後はSD-90のドライバフォルダに入っているinstall.exeを実行しましょう。これでインストールに成功したら、あなたは人生の勝利者です！
+                </p>
+                <h3>最後に<hr></h3>
+                <p>
+                    人生の勝利者になった君！君も東方風erにならないかい？(もし、このインストール方法に間違いがあったら<a href="https://twitter.com/welcome_madhell" target="_blank">@welcome_madhell</a>に連絡してくれると助かります)
                 </p>
             </div>
         </div>

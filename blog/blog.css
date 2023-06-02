@@ -1,12 +1,14 @@
 :root {
     --blog-box-color:rgba(215, 215, 215, 0.9);
     --blog-rebox-color:rgba(133, 133, 133, 0.9);
+    --caption-text:rgba(0, 0, 0,0.8);
 }
 
 @media (prefers-color-scheme: dark){
     :root{
         --blog-box-color:rgba(32,32,32,0.9);
         --blog-rebox-color:rgba(100, 100, 100, 0.9);
+        --caption-text:rgba(255, 255, 255,0.8);
     }
 }
 .blog{
@@ -45,10 +47,16 @@
     border-radius: 10px;
 }
 
+figcaption{
+    text-align: center;
+    font-size: smaller;
+    color: var(--caption-text);
+}
 
 .referencebox{
     background-color: var(--blog-rebox-color);
     color:aliceblue;
+    word-break: break-all;
     padding: 0.5em 1em;
     margin: 0 0;
 }
@@ -59,7 +67,10 @@
     }
 }
 
-@media (max-width:400px){
+@media (max-width:450px){
+    .img{
+        width:100%;
+    }
     .img img{
         width:100%;
     }
