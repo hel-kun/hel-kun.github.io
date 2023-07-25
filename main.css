@@ -16,6 +16,14 @@
 	a{color:#93d7f7;}
 }
 
+.ichigyou img{
+    vertical-align: middle;
+    display: inline-block;
+}
+.ichigyou span{
+    display: inline-block;
+}
+
 body{
     display: block;
     color: var(--main-text);
