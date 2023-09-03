@@ -14,13 +14,11 @@
     <title>へる破壊財団</title>
 </head>
 <style>
-:root {
+    :root {
     --main-text:black;
     --main-bg:white;
     --menu-btn-color:#270e6596;
     --menu-bg-color:rgba(221, 147, 253, 0.8);
-    --main-a:rgb(0, 150, 219);
-    --menu-hover-color:rgba(17,17,17,0.3);
 }
 
 @media (prefers-color-scheme: dark){
@@ -29,21 +27,9 @@
         --main-bg:black;
         --menu-btn-color:#6333dc96;
         --menu-bg-color:rgba(70, 26, 88, 0.8);
-        --main-a:rgb(147, 215, 247);
-        --menu-hover-color:rgba(17, 17, 17, 0.5);
     }
-}
 
-a{
-    color:var(--main-a);
-}
-
-.ichigyou img{
-    vertical-align: middle;
-    display: inline-block;
-}
-.ichigyou span{
-    display: inline-block;
+	a{color:#93d7f7;}
 }
 
 body{
@@ -78,16 +64,6 @@ header hr{
 .hamburger-menu{
     display:none;
 }
-
-/*.nav1{
-    display: block;
-    grid-area: c;
-    width: 100%;
-    height: 70px;
-    background-color: var(--menu-btn-color);
-    padding-top: 5px;
-    box-sizing: border-box;
-}*/
 
 .nav1 ul {
     list-style-type: none;
@@ -127,12 +103,24 @@ header hr{
     border-radius: 10px;
 }
 
-.top{
+.main404 {
+    display: flex;
     grid-area: d;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
-.top iframe{
+.main404 iframe{
     width:32%;
     aspect-ratio: 560/315;
+}
+
+.header404{
+    font-size: 54px;
+}
+.content404{
+    text-align: center;
+    font-size: 20px;
 }
 
 .bottom{
@@ -266,9 +254,6 @@ header hr{
 @media (max-width:450px){
     .top iframe{
         width:95%;
-    }
-    .ichigyou img{
-        display:none;
     }
     .blogimg{
         width: 100px;
