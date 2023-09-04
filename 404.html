@@ -9,16 +9,18 @@
     <meta name="og:title" content="へる破壊財団" />
     <meta name="og:description" content="へるくんの部屋です" />
     <meta name="og:image" content="https://hel-kun.github.io/fig/welcome_hell.PNG" />
-    <link rel="shortcut icon" href="../fig/oni.png">
+    <link rel="shortcut icon" href="https://helkun.dev/fig/oni.png">
     <script type="text/javascript" src="main.js"></script>
     <title>へる破壊財団</title>
 </head>
 <style>
-    :root {
+:root {
     --main-text:black;
     --main-bg:white;
     --menu-btn-color:#270e6596;
     --menu-bg-color:rgba(221, 147, 253, 0.8);
+    --main-a:rgb(0, 150, 219);
+    --menu-hover-color:rgba(17,17,17,0.3);
 }
 
 @media (prefers-color-scheme: dark){
@@ -27,9 +29,21 @@
         --main-bg:black;
         --menu-btn-color:#6333dc96;
         --menu-bg-color:rgba(70, 26, 88, 0.8);
+        --main-a:rgb(147, 215, 247);
+        --menu-hover-color:rgba(17, 17, 17, 0.5);
     }
+}
 
-	a{color:#93d7f7;}
+a{
+    color:var(--main-a);
+}
+
+.ichigyou img{
+    vertical-align: middle;
+    display: inline-block;
+}
+.ichigyou span{
+    display: inline-block;
 }
 
 body{
@@ -255,6 +269,9 @@ header hr{
     .top iframe{
         width:95%;
     }
+    .ichigyou img{
+        display:none;
+    }
     .blogimg{
         width: 100px;
     }
@@ -282,9 +299,9 @@ header hr{
         <header>
             <a class="header" href="https://helkun.dev">
                 <h1 class="ichigyou">
-                <img src="fig/oni_header.png" style="width:60px">
+                <img src="https://helkun.dev/fig/oni_header.png" style="width:60px">
                 へる破壊財団
-                <img src="fig/oni_header.png" style="width:60px">
+                <img src="https://helkun.dev/fig/oni_header.png" style="width:60px">
                 </h1>
             </a>
             <hr>
