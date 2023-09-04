@@ -135,15 +135,7 @@ header hr{
     .nav1{
         display:none;
     }
-
-    .li1{
-        display: none;
-    }
-
-    .a1{
-        display: none;
-    }
-
+    
     .top iframe{
         width:48%;
     }
@@ -240,6 +232,10 @@ header hr{
         position: absolute;
         right: 11px;
         top: 16px;
+    }
+
+    .menu-content ul li a:hover {
+        background-color: var(--menu-hover-color);
     }
 
     #menu-btn-check:checked ~ .menu-content {
