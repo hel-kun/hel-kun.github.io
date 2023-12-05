@@ -1,5 +1,6 @@
 :root {
     --blog-box-color:rgba(215, 215, 215, 0.9);
+    --blog-box-hover-color:rgba(180, 180, 180, 0.9);
     --blog-rebox-color:rgba(133, 133, 133, 0.9);
     --caption-text:rgba(0, 0, 0,0.8);
 }
@@ -7,6 +8,7 @@
 @media (prefers-color-scheme: dark){
     :root{
         --blog-box-color:rgba(32,32,32,0.9);
+        --blog-box-hover-color:rgba(90, 90, 90, 0.9);
         --blog-rebox-color:rgba(100, 100, 100, 0.9);
         --caption-text:rgba(255, 255, 255,0.8);
     }
@@ -21,6 +23,29 @@
     padding: 0.5em 1em;
     margin: 2em 10em;
     border-radius: 10px;
+}
+
+.linkblogbox{
+    display:block;
+    text-decoration: none;
+    background-color: var(--blog-box-color);
+    padding: 0.5em 1em;
+    margin: 2em 10em;
+    border-radius: 10px;
+}
+
+.linkblogbox h2{
+    text-align:center;
+    margin: 0; 
+    padding: 0;
+}
+.linkblogbox p {
+    margin: 0; 
+    padding: 0;
+}
+
+.linkblogbox:hover{
+    background-color: var(--blog-box-hover-color);
 }
 .topimg{
     width:100%;
