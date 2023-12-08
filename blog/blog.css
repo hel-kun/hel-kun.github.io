@@ -92,6 +92,9 @@ figcaption{
     .blogbox{
         margin: 2em 0;
     }
+    .linkblogbox{
+        margin: 2em 0;
+    }
 }
 
 @media (max-width:450px){
